@@ -1,0 +1,375 @@
+<!DOCTYPE HTML>
+<!--
+	Spectral by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Treasure Hunter by Q-Games</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+				<header id="header" class="alt">
+				<h1><a href="index.html">Treasure Hunter</a></h1>
+				<nav id="nav">
+					<ul>
+						<li class="special">
+							<a href="#menu" class="menuToggle"><span>Menu</span></a>
+							<div id="menu">
+								<ul>
+									<li><a href="index.html">Home</a></li>
+									<li><a href="puzzle-setup.html">Treasure Hunt Setup</a></li>
+									<li><a href="print-puzzle.html">Print Puzzle</a></li>
+									<li><a href="start-puzzle.html">Start Puzzle</a></li>
+									<li><a href="left-sidebar.html">About Us</a></li>
+									<li><a href="left-sidebar.html">Donate</a></li>
+									<li><a href="right-sidebar.html">Contact Us</a></li>
+									<!-- <li><a href="#">Sign Up</a></li>
+									<li><a href="#">Log In</a></li> -->
+								</ul>
+							</div>
+						</li>
+					</ul>
+				</nav>
+			</header>
+				<!-- Main -->
+					<article id="main">
+						<header>
+							<h2>Treasure Hunt Setup</h2>
+							
+						</header>
+						<section class="wrapper style5">
+							<div class="inner">
+
+						<h3>Select Available Items</h3>
+						<p>Click on the items in the order of your treasure hunt. This will determine where your hunters will be going. You can make it as long as you want or as short as you want.</p>
+						<p>The first item will always be: <span class="underline">Phone Charger</span></p>
+						<p>The final item is where you should put your <span class="underline">treasure.</span></p>						
+						<input type="checkbox" value="Airconditioner" class="checkbox" id="airconditioner">
+						<label for="airconditioner">Air-Conditioner</label>
+						<input type="checkbox" value="Bathtub" class="checkbox" id="bathtub">
+						<label for="bathtub">Bathtub</label>
+						
+						<input type="checkbox" value="Chair" class="checkbox" id="chair">
+						<label for="chair">Chair</label>
+						<input type="checkbox" value="Closet" class="checkbox" id="closet">
+						<label for="closet">Closet</label>
+						<input type="checkbox" value="FamilyAlbum" class="checkbox" id="familyalbum">
+						<label for="familyalbum">Family Album</label>
+						<input type="checkbox" value="Fridge" class="checkbox" id="fridge">
+						<label for="fridge">Fridge</label>	
+
+						<input type="checkbox" value="Mailbox" class="checkbox" id="mailbox">
+						<label for="mailbox">Mailbox</label>
+						<input type="checkbox" value="Microwave" class="checkbox" id="microwave">
+						<label for="microwave">Microwave</label>
+						<input type="checkbox" value="Pillow" class="checkbox" id="pillow">
+						<label for="pillow">Pillow</label>
+						<input type="checkbox" value="Table" class="checkbox" id="table">
+						<label for="table">Table</label>								
+						<input type="checkbox" value="Toothpaste" class="checkbox" id="toothpaste">
+						<label for="toothpaste">Toothpaste</label>		
+						<input type="checkbox" value="TV" class="checkbox" id="tv">
+						<label for="tv">TV</label>
+						<input type="checkbox" value="Window" class="checkbox" id="window">
+						<label for="window">Window</label>	
+						<p class="print-values" id="valueList">You have selected in order : </p>
+							
+						
+						
+							
+						
+						<h3>Select Theme</h3>
+						<p>Choose what "Theme" you'd like.<br>
+						At this moment only pirates is available.</p>
+					
+						<div class="dropdown">
+							<div class="select">
+								<span class="selected">Pirates</span>
+								<div class="caret"></div>
+							</div>
+							<ul class="theme">
+								<li class="active">Pirates</li>
+								<li>Zombies</li>
+								<li>Dungeons and Dragons</li>
+								<li>Princess</li>
+							</ul>
+						</div>
+					
+						<h3>Select Difficulty</h3>
+						<p>Choose how difficult you want the treasure hunt to be.<br>
+						We recommend ages below 10 for "Easy".</p>
+						<div class="dropdown">
+							<div class="select">
+								<span class="selected">Easy</span>
+								<div class="caret"></div>
+							</div>
+							<ul class="theme">
+								<li class="active">Easy</li>
+								<li>Normal</li>
+								<li>Hard</li>
+							</ul>
+						</div>
+						<br>
+						
+						<ul class="actions special">
+							<button id="button" type="button" class="button primary" onclick="downloadPDF()">Generate the Hunt!</button>
+						</ul>
+						<div id="pdf-content" class="table-wrapper">
+							<h4 id="error"></h4>
+							<!-- <img src="images/QR-code-bookshelf-riddle.png" id="printthis"> -->
+							<table id="qrCodeList" class="alt"></table>
+							<p id="printMessage"></p>
+							<h4>Please share this <span class="underline"><a href="start-puzzle.html">start puzzle</a></span> page with your hunter.</h4>
+						</div>
+
+							</div>
+						</section>
+					</article>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<ul class="copyright">
+							<li>&copy;2023 Q-Games. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+			<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    		<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
+			<script>
+				var valueList = document.getElementById('valueList');
+				var text = '<span>You have selected in order : </span>';
+				var listArray = ['PhoneCharger'];
+
+				var checkboxes = document.querySelectorAll('.checkbox');
+
+				for(var checkbox of checkboxes){
+					checkbox.addEventListener('click',function(){
+						if(this.checked == true){
+							listArray.push(this.value);
+							valueList.innerHTML = text + listArray.join(' --> ');
+						} else {
+							listArray = listArray.filter(e => e !== this.value);
+							valueList.innerHTML = text + listArray.join(' --> ');
+						}
+					})
+					
+				}
+
+				const dropdowns  = document.querySelectorAll('.dropdown');
+
+				dropdowns.forEach(dropdown => {
+					const select = dropdown.querySelector('.select');
+					const caret = dropdown.querySelector('.caret');
+					const theme = dropdown.querySelector('.theme');
+					const options = dropdown.querySelectorAll('.theme li');
+					const selected = dropdown.querySelector('.selected');
+
+					select.addEventListener('click', () => {
+
+						select.classList.toggle('select-clicked');
+						caret.classList.toggle('caret-rotate');
+						theme.classList.toggle('theme-open');
+					});	
+					options.forEach(option => {
+						option.addEventListener('click', () => {
+							selected.innerText = option.innerText;
+							select.classList.remove('select-clicked');
+							select.classList.remove('caret-rotate');
+							theme.classList.remove('theme-open');
+							options.forEach(option => {
+								option.classList.remove('active');
+							});
+							option.classList.add('active')
+							console.log(option)
+						});
+						
+					});
+					
+				});	
+				function downloadPDF() {
+				//Generate List of QR codes
+				let QRList = {airconditioner:'QR-code-window-riddle.png',
+				bathtub:'QR-code-window-riddle.png',
+				chair:'QR-code-window-riddle.png',
+				closet:'QR-code-window-riddle.png',
+				familyalbum:'QR-code-window-riddle.png',
+				fridge:'QR-code-window-riddle.png',
+				mailbox:'QR-code-window-riddle.png',
+				microwave:'QR-code-window-riddle.png',
+				pillow:'QR-code-window-riddle.png',
+				table:'QR-code-window-riddle.png',
+				toothpaste:'QR-code-window-riddle.png',
+				tv:'QR-code-window-riddle.png',
+				window:'QR-code-window-riddle.png',			
+				}
+				//Array for QR code list
+				var result = [[1, 'QR-code-window-riddle.png', 'Phone Charger']];
+
+				for(let i = 1; i < listArray.length; i++){
+					for(key in QRList){
+						if(listArray[i].toLowerCase() == key.toLowerCase()){
+							result[i] = [i+1, QRList[key], listArray[i]]
+							
+						}
+					}
+					
+				}
+				console.log(listArray)
+				console.log(result)
+				//create table
+				let mytable = document.querySelector('#qrCodeList')
+				var table = document.createElement('table');
+				//table.style.width = '50%';
+				// create header row and cells
+				var headerRow = document.createElement('tr');
+				var headerCell1 = document.createElement('th');
+				headerCell1.appendChild(document.createTextNode('Clue Order'));
+				headerCell1.style.fontSize = '20px';
+				headerCell1.style.textAlign = 'center';
+				var headerCell2 = document.createElement('th');
+				headerCell2.appendChild(document.createTextNode('QR Code'));
+				headerCell2.style.fontSize = '20px';
+				var headerCell3 = document.createElement('th');
+				headerCell3.appendChild(document.createTextNode('Place to hide Clue'));
+				headerCell3.style.fontSize = '20px';
+				var headerCell4 = document.createElement('th');
+				headerCell4.appendChild(document.createTextNode('Next Clue'));
+				headerCell4.style.fontSize = '20px';
+				headerRow.appendChild(headerCell1);
+				headerRow.appendChild(headerCell2);
+				headerRow.appendChild(headerCell3);
+				headerRow.appendChild(headerCell4);
+				// headerCell1.style.color = '#0000ff';
+				// headerCell2.style.color = '#0000ff';
+				// headerCell3.style.color = '#0000ff';
+				// headerCell4.style.color = '#0000ff';
+				
+
+				// if no items are selected
+				let errorMessage = document.querySelector('#error');
+				let printListMsg = document.querySelector('#printMessage');
+				if(result.length == 1){
+					mytable.innerHTML = '';
+					printListMsg.innerHTML = '';
+					errorMessage.innerHTML = 'Please add more items!';
+				} else {
+					errorMessage.innerHTML = '';
+					mytable.innerHTML = '';
+					mytable.appendChild(headerRow);
+					// create data rows and cells
+					for (var i = 0; i < result.length; i++) {
+						var dataRow = document.createElement('tr');
+						var dataCell1 = document.createElement('td');
+
+							dataCell1.appendChild(document.createTextNode(i+1));
+							dataCell1.style.width = '25%';
+							dataCell1.style.verticalAlign = 'middle';
+							dataCell1.style.textAlign = 'center';
+							var dataCell2 = document.createElement('td');
+							var img = document.createElement('img');
+							img.src = 'images/' + result[i][1];
+							img.style.width = '50%';
+							img.style.height = '50%';
+							dataCell2.appendChild(img);
+							dataCell2.style.width = '20%';
+							var dataCell3 = document.createElement('td');
+							dataCell3.appendChild(document.createTextNode(result[i][2]));
+							dataCell3.style.width = '25%';
+							dataCell3.style.verticalAlign = 'middle';
+							var dataCell4 = document.createElement('td');
+							if(i < result.length-1){
+								dataCell4.appendChild(document.createTextNode(result[i+1][2]));
+							} else {
+								dataCell4.appendChild(document.createTextNode('Hidden Treasure'));
+							}
+							dataCell4.style.width = '25%';
+							dataCell4.style.verticalAlign = 'middle';
+					
+					
+					dataRow.appendChild(dataCell1);
+					dataRow.appendChild(dataCell2);
+					dataRow.appendChild(dataCell3);
+					dataRow.appendChild(dataCell4);
+					mytable.appendChild(dataRow);
+
+					// add table to the HTML document
+					document.body.appendChild(table);
+					//Show user to how to print page
+					// const linkUrl = '/print-puzzle.html';
+					// const linkText = 'click here';
+					// const linkHtml = '<a href="' + linkUrl + '">' + linkText + '</a>';
+					printListMsg.innerHTML = 'The QRcodes have now been downloaded in a PDF file. We recommend that you print this pdf file 2 times. Print it once and then print it again after placing sticky-notes over the QR codes. You can then easily place sticky notes around the house.';
+					
+				}
+				}
+				
+				
+
+				
+				// Get the HTML table element to be converted to PDF
+				const table2 = document.querySelector('#qrCodeList');
+
+				// Scroll the table into view
+				window.scrollTo(0, table2.offsetTop);
+
+				setTimeout(() => {
+					// Use html2canvas to create a canvas element from the table
+					html2canvas(table2, { scrollY: -window.scrollY }).then(canvas => {
+						// Convert the canvas to a data URL
+						const dataUrl = canvas.toDataURL('image/png');
+
+						// Create a PDF document
+						const doc = new jsPDF();
+
+						// Add a title to the first page of the PDF document
+						doc.setFontSize(20);
+						doc.text('Treasure Hunt Clue Order', 65, 20);
+
+						//Add table
+						
+						// Add the image of the table to the PDF document
+						doc.addImage(dataUrl, 'PNG', 10, 30, doc.internal.pageSize.getWidth() - 20, 0, 'FAST');
+
+						// Download the PDF file
+						doc.save('Treasure Hunt Setup.pdf');
+					});
+				}, 1500); // Wait for 1 second before capturing the canvas
+
+				
+
+
+				}
+
+				
+			</script>
+	</body>
+</html>
