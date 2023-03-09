@@ -38,6 +38,7 @@ Credits:
 
 	Icons:
 		Font Awesome (fontawesome.io)
+		Noun Project (thenounproject.com)
 
 	Other:
 		jQuery (jquery.com)
