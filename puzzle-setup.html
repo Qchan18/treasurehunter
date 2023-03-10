@@ -54,41 +54,90 @@
 						<p>Click on the items in the order of your treasure hunt. This will determine where your hunters will be going. You can make it as long as you want or as short as you want.</p>
 						<p>The first item will always be: <span class="underline">Phone Charger</span></p>
 						<p>The final item is where you should put your <span class="underline">treasure.</span></p>						
-						<input type="checkbox" value="Airconditioner" class="checkbox" id="airconditioner">
-						<label for="airconditioner">Air-Conditioner</label>
-						<input type="checkbox" value="Bathtub" class="checkbox" id="bathtub">
-						<label for="bathtub">Bathtub</label>
 						
-						<input type="checkbox" value="Chair" class="checkbox" id="chair">
-						<label for="chair">Chair</label>
-						<input type="checkbox" value="Closet" class="checkbox" id="closet">
-						<label for="closet">Closet</label>
-						<input type="checkbox" value="FamilyAlbum" class="checkbox" id="familyalbum">
-						<label for="familyalbum">Family Album</label>
-						<input type="checkbox" value="Fridge" class="checkbox" id="fridge">
-						<label for="fridge">Fridge</label>	
+						<div class="table-wrapper">
+						<h3>Puzzles</h3>
+						<table class="alt">
+							<tbody>
+							<tr>
+								<th><input type="checkbox" value="Airconditioner" class="checkbox" id="airconditioner">
+									<label for="airconditioner">Air-Conditioner</label></th>
+								<th><input type="checkbox" value="Bed" class="checkbox" id="bed">
+									<label for="bed">Bed</label></th>
+								<th><input type="checkbox" value="Bookshelf" class="checkbox" id="bookshelf">
+											<label for="bookshelf">Bookshelf</label></th>
+								<th><input type="checkbox" value="Closet" class="checkbox" id="closet">
+												<label for="closet">Closet</label></th>
+							</tr>
+							<tr>
+								<th><input type="checkbox" value="Microwave" class="checkbox" id="microwave">
+									<label for="microwave">Microwave</label></th>
+								<th><input type="checkbox" value="Table" class="checkbox" id="table">
+									<label for="table">Table</label></th>
+								<th><input type="checkbox" value="Toothpaste" class="checkbox" id="toothpaste">
+									<label for="toothpaste">Toothpaste</label>	</th>
+								<th><input type="checkbox" value="Window" class="checkbox" id="window">
+									<label for="window">Window</label>	</th>
+							</tr>
+							<!-- <tr>
+								<th></th>
+								<th></th>
+								<th></th>
+								<th></th>
+							</tr> -->
+							</tbody>
+						</table>
+						<h3>Riddles</h3>
+						<table class="alt">
+							<tr>
+								<th><input type="checkbox" value="Airconditioner" class="checkbox" id="airconditioner">
+									<label for="airconditioner">Air-Conditioner</label></th>
+								<th><input type="checkbox" value="Bathtub" class="checkbox" id="bathtub">
+										<label for="bathtub">Bathtub</label></th>
+								<th><input type="checkbox" value="Bed" class="checkbox" id="bed">
+										<label for="bed">Bed</label></th>
+								<th><input type="checkbox" value="Closet" class="checkbox" id="closet">
+											<label for="closet">Closet</label></th>
+							</tr>
+							<tr>
+								<th><input type="checkbox" value="Microwave" class="checkbox" id="microwave">
+									<label for="microwave">Microwave</label></th>
+								<th><input type="checkbox" value="Pillow" class="checkbox" id="pillow">
+									<label for="pillow">Pillow</label></th>
+								<th><input type="checkbox" value="Table" class="checkbox" id="table">
+									<label for="table">Table</label></th>
+								<th><input type="checkbox" value="Toothpaste" class="checkbox" id="toothpaste">
+									<label for="toothpaste">Toothpaste</label>	</th>
+							</tr>
+							<tr>
+								<th><input type="checkbox" value="Window" class="checkbox" id="window">
+									<label for="window">Window</label></th>
+								<th></th>
+								<th></th>
+								<th></th>
+							</tr>
+						</table>
+						</div>
+						
+						<!-- <input type="checkbox" value="Chair" class="checkbox" id="chair">
+						<label for="chair">Chair</label> -->
 
-						<input type="checkbox" value="Mailbox" class="checkbox" id="mailbox">
-						<label for="mailbox">Mailbox</label>
-						<input type="checkbox" value="Microwave" class="checkbox" id="microwave">
-						<label for="microwave">Microwave</label>
-						<input type="checkbox" value="Pillow" class="checkbox" id="pillow">
-						<label for="pillow">Pillow</label>
-						<input type="checkbox" value="Table" class="checkbox" id="table">
-						<label for="table">Table</label>								
-						<input type="checkbox" value="Toothpaste" class="checkbox" id="toothpaste">
-						<label for="toothpaste">Toothpaste</label>		
-						<input type="checkbox" value="TV" class="checkbox" id="tv">
-						<label for="tv">TV</label>
-						<input type="checkbox" value="Window" class="checkbox" id="window">
-						<label for="window">Window</label>	
+						<!-- <input type="checkbox" value="Fridge" class="checkbox" id="fridge">
+						<label for="fridge">Fridge</label>	 -->
+
+						<!-- <input type="checkbox" value="Mailbox" class="checkbox" id="mailbox">
+						<label for="mailbox">Mailbox</label> -->
+							
+						<!-- <input type="checkbox" value="TV" class="checkbox" id="tv">
+						<label for="tv">TV</label> -->
+						
 						<p class="print-values" id="valueList">You have selected in order : </p>
 							
 						
 						
 							
 						
-						<h3>Select Theme</h3>
+						<!-- <h3>Select Theme</h3>
 						<p>Choose what "Theme" you'd like.<br>
 						At this moment only pirates is available.</p>
 					
@@ -103,9 +152,9 @@
 								<li>Dungeons and Dragons</li>
 								<li>Princess</li>
 							</ul>
-						</div>
+						</div> -->
 					
-						<h3>Select Difficulty</h3>
+						<!-- <h3>Select Difficulty</h3>
 						<p>Choose how difficult you want the treasure hunt to be.<br>
 						We recommend ages below 10 for "Easy".</p>
 						<div class="dropdown">
@@ -117,7 +166,7 @@
 								<li class="active">Easy</li>
 								<li>Normal</li>
 								<li>Hard</li>
-							</ul>
+							</ul> -->
 						</div>
 						<br>
 						
