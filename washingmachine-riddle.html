@@ -30,12 +30,12 @@
 					<input id='N' type="text" class="letter-input" maxlength="1" oninput="this.value = this.value.toUpperCase()">
 					<input id='G' type="text" class="letter-input" maxlength="1" oninput="this.value = this.value.toUpperCase()">
 					<input id='M' type="text" class="letter-input" maxlength="1" oninput="this.value = this.value.toUpperCase()">
-					<input id='A' type="text" class="letter-input" maxlength="1" oninput="this.value = this.value.toUpperCase()">
+					<input id='A2' type="text" class="letter-input" maxlength="1" oninput="this.value = this.value.toUpperCase()">
 					<input id='C' type="text" class="letter-input" maxlength="1" oninput="this.value = this.value.toUpperCase()">
 					<input id='H2' type="text" class="letter-input" maxlength="1" oninput="this.value = this.value.toUpperCase()">
 					<input id='I2' type="text" class="letter-input" maxlength="1" oninput="this.value = this.value.toUpperCase()">
 					<input id='N2' type="text" class="letter-input" maxlength="1" oninput="this.value = this.value.toUpperCase()">
-					<input id='E' type="text" class="letter-input" maxlength="1" oninput="this.value = this.value.toUpperCase()">
+					<input id='G2' type="text" class="letter-input" maxlength="1" oninput="this.value = this.value.toUpperCase()">
 				</div>
 				
 
@@ -53,16 +53,16 @@
 				let inputH2 = document.getElementById('H2');
 				let inputI2 = document.getElementById('I2');
 				let inputN2 = document.getElementById('N2');
-				let inputE = document.getElementById('G');
+				let inputG2 = document.getElementById('G2');
 
-						inputM.addEventListener("input",() => {
-						checkInput(inputM, "M");
+						inputW.addEventListener("input",() => {
+						checkInput(inputW, "W");
 						});
 						inputA.addEventListener("input",() => {
 						checkInput(inputA, "A");
 						});
-						inputC.addEventListener("input",() => {
-						checkInput(inputC, "C");
+						inputS.addEventListener("input",() => {
+						checkInput(inputS, "S");
 						});
 						inputH.addEventListener("input",() => {
 						checkInput(inputH, "H");
@@ -73,8 +73,11 @@
 						inputN.addEventListener("input",() => {
 						checkInput(inputN, "N");
 						});
+						inputG.addEventListener("input",() => {
+						checkInput(inputG, "G");
+						});
 						inputM.addEventListener("input",() => {
-						checkInput(inputM, "E");
+						checkInput(inputM, "M");
 						});
 						inputA2.addEventListener("input",() => {
 						checkInput(inputA2, "A");
@@ -83,16 +86,16 @@
 						checkInput(inputC, "C");
 						});
 						inputH2.addEventListener("input",() => {
-						checkInput(inputH, "H");
+						checkInput(inputH2, "H");
 						});
 						inputI2.addEventListener("input",() => {
-						checkInput(inputI, "I");
+						checkInput(inputI2, "I");
 						});
 						inputN2.addEventListener("input",() => {
-						checkInput(inputN, "N");
+						checkInput(inputN2, "N");
 						});
-						inputG.addEventListener("input",() => {
-						checkInput(inputG, "G");
+						inputG2.addEventListener("input",() => {
+						checkInput(inputG2, "G");
 						});
 				  
 				  
