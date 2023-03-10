@@ -30,9 +30,9 @@
 									<li><a href="puzzle-setup.html">Treasure Hunt Setup</a></li>
 									<li><a href="print-puzzle.html">Print Puzzle</a></li>
 									<li><a href="start-puzzle.html">Start Puzzle</a></li>
-									<li><a href="left-sidebar.html">About Us</a></li>
-									<li><a href="left-sidebar.html">Donate</a></li>
-									<li><a href="right-sidebar.html">Contact Us</a></li>
+									<li><a href="about.html">About Us</a></li>
+									<li><a href="donate.html">Donate</a></li>
+									<li><a href="contact.html">Contact Us</a></li>
 									<!-- <li><a href="#">Sign Up</a></li>
 									<li><a href="#">Log In</a></li> -->
 								</ul>
@@ -51,7 +51,7 @@
 							<div class="inner">
 
 						<h3>Select Available Items</h3>
-						<p>Click on the items in the order of your treasure hunt. This will determine where your hunters will be going. You can make it as long as you want or as short as you want.</p>
+						<p>Click on the items in the order of your treasure hunt. This will determine where your hunter/s will be going. You can make it as long as you want or as short as you want. You can check the clue by clicking on the name of the item.</p>
 						<p>The first item will always be: <span class="underline">Phone Charger</span></p>
 						<p>The final item is where you should put your <span class="underline">treasure.</span></p>						
 						<a href=""></a>
@@ -117,10 +117,14 @@
 									<label for="tabler"><a href="table-riddle.html" target="_blank">Table</a></label></th>
 								<th><input type="checkbox" value="Toothpaste" class="checkbox" id="toothpaster">
 									<label for="toothpaster"><a href="toothpaste-riddle.html" target="_blank">Toothpaste</a></label>	</th>
+								<th><input type="checkbox" value="Suitcase" class="checkbox" id="suitcaser">
+									<label for="suitcaser"><a href="suitcase-riddle.html" target="_blank">Suitcase</a></th>
+								<th><input type="checkbox" value="Washing Machine" class="checkbox" id="washingmachiner">
+									<label for="washingmachiner"><a href="washingmachine-riddle.html" target="_blank">Washing Machine</a></label></th>
+								</tr>
+							<tr>
 								<th><input type="checkbox" value="Window" class="checkbox" id="windowr">
 									<label for="windowr"><a href="window-riddle.html" target="_blank">Window</a></label></th>
-								<th></th>
-								<th></th>
 							</tr>
 						</table>
 						</div>
@@ -282,41 +286,43 @@
 				//Generate List of QR codes
 				let QRList = {
 				//Puzzles
-				airconditionerp:'QR-code-window-riddle.png',
-				bathtubp:'QR-code-window-riddle.png',
-				bedp:'QR-code-window-riddle.png',
-				bookshelfp:'QR-code-window-riddle.png',
-				chairp:'QR-code-window-riddle.png',
-				closetp:'QR-code-window-riddle.png',
-				familyalbump:'QR-code-window-riddle.png',
-				fridgep:'QR-code-window-riddle.png',
-				garbagebinp:'QR-code-window-riddle.png',
-				mailboxp:'QR-code-window-riddle.png',
-				microwavep:'QR-code-window-riddle.png',
-				ovenp:'QR-code-window-riddle.png',
-				pillowp:'QR-code-window-riddle.png',
-				tablep:'QR-code-window-riddle.png',
-				toothpastep:'QR-code-window-riddle.png',
-				tvp:'QR-code-window-riddle.png',
-				windowp:'QR-code-window-riddle.png',			
+				airconditionerp:'images/qr-airconditioner-puzzle.png'',
+				bathtubp:'images/qr-bathtub-puzzle.png'',
+				bedp:'images/qr-bed-puzzle.png',
+				bookshelfp:'images/qr-bookshelf-puzzle.png',
+				chairp:'images/qr-chair-puzzle.png',
+				closetp:'images/qr-closet-puzzle.png',
+				familyalbump:'images/qr-familyalbum-puzzle.png',
+				fridgep:'images/qr-fridge-puzzle.png',
+				garbagebinp:'images/qr-garbagebin-puzzle.png',
+				mailboxp:'images/qr-mailbox-puzzle.png',
+				microwavep:'images/qr-microwave-puzzle.png',
+				ovenp:'images/qr-oven-puzzle.png',
+				pillowp:'images/qr-pillow-puzzle.png',
+				tablep:'images/qr-table-puzzle.png',
+				toothpastep:'images/qr-toothpaste-puzzle.png',
+				tvp:'images/qr-tv-puzzle.png',
+				windowp:'images/qr-window-puzzle.png',			
 				//Riddles
-				airconditionerr:'QR-code-window-riddle.png',
-				bathtubr:'QR-code-window-riddle.png',
-				bedr:'QR-code-window-riddle.png',
-				bookshelfr:'QR-code-window-riddle.png',
-				chairr:'QR-code-window-riddle.png',
-				closetr:'QR-code-window-riddle.png',
-				familyalbumr:'QR-code-window-riddle.png',
-				fridger:'QR-code-window-riddle.png',
-				garbagebinr:'QR-code-window-riddle.png',
-				mailboxr:'QR-code-window-riddle.png',
-				microwaver:'QR-code-window-riddle.png',
-				ovenr:'QR-code-window-riddle.png',
-				pillowr:'QR-code-window-riddle.png',
-				tabler:'QR-code-window-riddle.png',
-				toothpaster:'QR-code-window-riddle.png',
-				tvr:'QR-code-window-riddle.png',
-				windowr:'QR-code-window-riddle.png',			
+				airconditionerr:'images/qr-airconditioner-riddle.png',
+				bathtubr:'images/qr-bathtub-riddle.png',
+				bedr:'images/qr-bed-riddle.png',
+				bookshelfr:'images/qr-bookshelf-riddle.png',
+				chairr:'images/qr-chair-riddle.png',
+				closetr:'images/qr-closet-riddle.png',
+				familyalbumr:'images/qr-familyalbum-riddle.png',
+				fridger:'images/qr-fridge-riddle.png',
+				garbagebinr:'images/qr-garbagebin-riddle.png',
+				mailboxr:'images/qr-mailbox-riddle.png',
+				microwaver:'images/qr-microwave-riddle.png',
+				ovenr:'images/qr-oven-riddle.png',
+				pillowr:'images/qr-pillow-riddle.png',
+				suitcaser:'images/qr-suitcase-riddle.png'',
+				tabler:'images/qr-table-riddle.png',
+				toothpaster:'images/qr-toothpaste-riddle.png',
+				tvr:'images/qr-tv-riddle.png',
+				washingmachiner:'images/qr-washingmachine-riddle.png''
+				windowr:'images/qr-window-riddle.png',			
 				}
 				//Array for QR code list
 				var result = [[1, 'QR-code-window-riddle.png', 'Phone Charger']];
