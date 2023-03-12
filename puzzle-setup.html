@@ -60,14 +60,14 @@
 						<table class="alt">
 							<tbody>
 							<tr>
-								<th><input type="checkbox" value="Bed" class="checkbox" id="bedp">
+								<th><input type="checkbox" value="Bed	" class="checkbox" id="bedp">
 									<label for="bedp"><a href="bed-puzzle.html" target="_blank">Bed</a></label></th>
 								<th><input type="checkbox" value="Bookshelf" class="checkbox" id="bookshelfp">
 											<label for="bookshelfp"><a href="bookshelf-puzzle.html" target="_blank">Bookshelf</a></label></th>
 								<th><input type="checkbox" value="Closet" class="checkbox" id="closetp">
 												<label for="closetp"><a href="closet-puzzle.html" target="_blank">Closet</a></label></th>
 								<th><input type="checkbox" value="Garbage Bin" class="checkbox" id="garbagebinp">
-									<label for="garbagebin"><a href="garbagebin-puzzle.html" target="_blank">Garbage Bin</a></label></th>
+									<label for="garbagebinp"><a href="garbagebin-puzzle.html" target="_blank">Garbage Bin</a></label></th>
 							</tr>
 							<tr>
 								<th><input type="checkbox" value="Microwave" class="checkbox" id="microwavep">
@@ -161,9 +161,9 @@
 								<li>Dungeons and Dragons</li>
 								<li>Princess</li>
 							</ul>
-						</div> -->
+						</div> 
 					
-						<!-- <h3>Select Difficulty</h3>
+						<h3>Select Difficulty</h3>
 						<p>Choose how difficult you want the treasure hunt to be.<br>
 						We recommend ages below 10 for "Easy".</p>
 						<div class="dropdown">
@@ -175,16 +175,15 @@
 								<li class="active">Easy</li>
 								<li>Normal</li>
 								<li>Hard</li>
-							</ul> -->
+							</ul>
 						</div>
-						<br>
+						<br> -->
 						
 						<ul class="actions special">
 							<button id="button" type="button" class="button primary" onclick="downloadPDF()">Generate the Hunt!</button>
 						</ul>
 						<div id="pdf-content" class="table-wrapper">
 							<h4 id="error"></h4>
-							<!-- <img src="images/QR-code-bookshelf-riddle.png" id="printthis"> -->
 							<table id="qrCodeList" class="alt"></table>
 							<p id="printMessage"></p>
 							<h4>Please share this <span class="underline"><a href="start-puzzle.html">start puzzle</a></span> page with your hunter.</h4>
@@ -324,9 +323,9 @@
 				windowr:'qr-window-riddle.png',			
 				}
 				//Array for QR code list
-				var result = [[1, 'QR-code-window-riddle.png', 'Phone Charger']];
+				var result = [];
 
-				for(let i = 1; i < riddleOrPuzzleArray.length; i++){
+				for(let i = 0; i < riddleOrPuzzleArray.length; i++){
 					for(key in QRList){
 						if(riddleOrPuzzleArray[i].toLowerCase() == key.toLowerCase()){
 							result[i] = [i+1, QRList[key], listArray[i]]
@@ -388,7 +387,7 @@
 							dataCell1.style.textAlign = 'center';
 							var dataCell2 = document.createElement('td');
 							var img = document.createElement('img');
-							img.src = 'https://github.com/Qchan18/treasurehunter/blob/master/images/' + result[i][1] + '?raw=true';
+							img.src = 'images/' + result[i][1];
 							img.style.width = '50%';
 							img.style.height = '50%';
 							dataCell2.appendChild(img);
