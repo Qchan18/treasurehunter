@@ -323,12 +323,12 @@
 				windowr:'qr-window-riddle.png',			
 				}
 				//Array for QR code list
-				var result = [];
+				var result = [[1,'', 'Phone Charger']];
 
-				for(let i = 0; i < riddleOrPuzzleArray.length; i++){
+				for(let i = 1; i < riddleOrPuzzleArray.length; i++){
 					for(key in QRList){
 						if(riddleOrPuzzleArray[i].toLowerCase() == key.toLowerCase()){
-							result[i] = [i+1, QRList[key], riddleOrPuzzleArray[i]]
+							result[i] = [i+1, QRList[key], listArray[i]]
 							
 						}
 					}
