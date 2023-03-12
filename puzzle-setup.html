@@ -377,7 +377,7 @@
 					mytable.innerHTML = '';
 					mytable.appendChild(headerRow);
 					// create data rows and cells
-					for (var i = 0; i < result.length-1; i++) {
+					for (var i = 0; i < result.length; i++) {
 						var dataRow = document.createElement('tr');
 						var dataCell1 = document.createElement('td');
 
@@ -387,7 +387,11 @@
 							dataCell1.style.textAlign = 'center';
 							var dataCell2 = document.createElement('td');
 							var img = document.createElement('img');
-							img.src = 'images/' + result[i+1][1];
+							if(i < result.length-1){
+								img.src = 'images/' + result[i+1][1];
+								} else {
+								img.src = 'image/treasurechest.png;
+								}
 							img.style.width = '50%';
 							img.style.height = '50%';
 							dataCell2.appendChild(img);
