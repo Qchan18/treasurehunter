@@ -60,7 +60,7 @@
 						<table class="alt">
 							<tbody>
 							<tr>
-								<th><input type="checkbox" value="Bed	" class="checkbox" id="bedp">
+								<th><input type="checkbox" value="Bed" class="checkbox" id="bedp">
 									<label for="bedp"><a href="bed-puzzle.html" target="_blank">Bed</a></label></th>
 								<th><input type="checkbox" value="Bookshelf" class="checkbox" id="bookshelfp">
 											<label for="bookshelfp"><a href="bookshelf-puzzle.html" target="_blank">Bookshelf</a></label></th>
@@ -328,7 +328,7 @@
 				for(let i = 0; i < riddleOrPuzzleArray.length; i++){
 					for(key in QRList){
 						if(riddleOrPuzzleArray[i].toLowerCase() == key.toLowerCase()){
-							result[i] = [i+1, QRList[key], listArray[i]]
+							result[i] = [i+1, QRList[key], riddleOrPuzzleArray[i]]
 							
 						}
 					}
