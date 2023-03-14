@@ -6,12 +6,37 @@
 -->
 <html>
 	<head>
-		<title>Treasure Hunter by Q-Games</title>
+		<title>Treasure Hunters by Q-Games</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+		
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/jquery.dropotron.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
 	</head>
+	<body>
+		<div id="">
+
+			<!-- Header -->
+			<header id="header">
+				<!-- <h1 id="logo"><a href="index.html">Treasure Hunters</a></h1> -->
+				<nav id="nav">
+					<ul>
+						<li><button id="button" type="button" class="button primary" onclick="giveHint(inputElements)">Hint</button></li>
+					</ul>
+				</nav>
+			</header>
 	<body class="is-preload">
 
 		<!-- Page Wrapper -->
@@ -57,7 +82,8 @@
 						inputT.addEventListener("input",() => {
 						checkInput(inputT, "T");
 						});
-				  
+						// create an array of all input elements for hint function
+						let inputElements = getAllInputElements();				  
 				  
 
 			</script>
@@ -78,14 +104,6 @@
 
 			</div>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
 
 	</body>
 </html>

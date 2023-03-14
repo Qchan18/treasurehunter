@@ -92,3 +92,23 @@ function checkInput(input, expectedValue) {
 		input.style.backgroundColor  = "red";
 	}
 }
+
+function getAllInputElements() {
+	let inputElements = Array.from(document.getElementsByTagName('input'));
+	return inputElements;
+}
+function giveHint(array) {				
+	if(array.length != 0){
+		// select a random input element
+		let elementPosition = Math.floor(Math.random() * inputElements.length)
+		let randomInput = inputElements[elementPosition];
+		inputElements.splice(elementPosition,1)
+		console.log(inputElements)
+		// generate a random letter
+		let letter = randomInput.id.replace(/\d+/g, ''); // generates a random lowercase letter
+
+		// input the random letter into the selected input element
+		randomInput.value = letter;
+	}
+
+}
