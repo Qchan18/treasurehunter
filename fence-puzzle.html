@@ -1,0 +1,88 @@
+<!DOCTYPE HTML>
+<!--
+	Spectral by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Treasure Hunter by Q-Games</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+				<!-- Header -->
+				
+				<!-- Main -->
+				<span class="image fit main"><img src="images/fence-puzzle.png" alt="" /></span>
+				<div class="input-container">
+					<input id='F' type="text" class="letter-input" maxlength="1" oninput="this.value = this.value.toUpperCase()">
+					<input id='E' type="text" class="letter-input" maxlength="1" oninput="this.value = this.value.toUpperCase()">
+					<input id='N' type="text" class="letter-input" maxlength="1" oninput="this.value = this.value.toUpperCase()">
+					<input id='C' type="text" class="letter-input" maxlength="1" oninput="this.value = this.value.toUpperCase()">
+					<input id='E2' type="text" class="letter-input" maxlength="1" oninput="this.value = this.value.toUpperCase()">
+				</div>
+				
+
+			<script>
+				let inputF = document.getElementById('F');
+				let inputE = document.getElementById('E');
+				let inputN = document.getElementById('N');
+				let inputC = document.getElementById('C');
+				let inputE2 = document.getElementById('E2');
+
+
+						inputF.addEventListener("input",() => {
+						checkInput(inputF, "F");
+						});
+						inputE.addEventListener("input",() => {
+						checkInput(inputE, "E");
+						});
+						inputN.addEventListener("input",() => {
+						checkInput(inputN, "N");
+						});
+						inputC.addEventListener("input",() => {
+						checkInput(inputC, "C");
+						});
+						inputE2.addEventListener("input",() => {
+						checkInput(inputE2, "E");
+						});
+
+				  
+				  
+
+			</script>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<ul class="copyright">
+							<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
