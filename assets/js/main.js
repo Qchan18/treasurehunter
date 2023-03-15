@@ -103,7 +103,7 @@ function giveHint(array) {
 		let elementPosition = Math.floor(Math.random() * inputElements.length)
 		let randomInput = inputElements[elementPosition];
 		inputElements.splice(elementPosition,1)
-		console.log(inputElements)
+
 		// generate a random letter
 		let letter = randomInput.id.replace(/\d+/g, ''); // generates a random lowercase letter
 
