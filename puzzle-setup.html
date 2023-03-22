@@ -500,13 +500,16 @@
 						// Add a title to the first page of the PDF document
 						doc.setFontSize(20);
 						doc.text('Treasure Hunt Clue Order', 65, 20);
-
-						//Add table
+						doc.setFontSize(12);
+						doc.text('We recommend that you print this pdf file 2 times.', 20, 30);
+						doc.text('Print it once and then print it again after placing sticky-notes over the QR codes.', 20, 35);
+						doc.text('You can then easily place sticky notes around the house.', 20, 40);
+						doc.text('Remember to share the starting clue with your hunter.', 20, 45);
+						
 						
 						// Add the image of the table to the PDF document
-						doc.addImage(dataUrl, 'PNG', 10, 30, doc.internal.pageSize.getWidth() - 20, 0, 'FAST');
-						doc.setFontSize(14);
-						doc.text('We recommend that you print this pdf file 2 times. Print it once and then print it again after placing sticky-notes over the QR codes. You can then easily place sticky notes around the house. Please share the starting clue with your hunter.');
+						doc.addImage(dataUrl, 'PNG', 10, 50, doc.internal.pageSize.getWidth() - 20, 0, 'FAST');
+						
 						// Download the PDF file
 						doc.save('Treasure Hunt Setup.pdf');
 					});

@@ -1,0 +1,103 @@
+<!DOCTYPE HTML>
+<!--
+	Spectral by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Treasure Hunters by Q-Games</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+		
+		<!-- Scripts -->
+		<script src="assets/js/jquery.min.js"></script>
+		<script src="assets/js/jquery.scrolly.min.js"></script>
+		<script src="assets/js/jquery.dropotron.min.js"></script>
+		<script src="assets/js/jquery.scrollex.min.js"></script>
+		<script src="assets/js/browser.min.js"></script>
+		<script src="assets/js/breakpoints.min.js"></script>
+		<script src="assets/js/util.js"></script>
+		<script src="assets/js/main.js"></script>
+	</head>
+	<body>
+		<div id="">
+
+			<!-- Header -->
+			<header id="header">
+				<!-- <h1 id="logo"><a href="index.html">Treasure Hunters</a></h1> -->
+				<nav id="nav">
+					<ul>
+						<li><button id="button" type="button" class="button primary" onclick="giveHint(inputElements)">Hint</button></li>
+					</ul>
+				</nav>
+			</header>
+				
+				<!-- Main -->
+				<span class="image fit main"><img src="images/fridge-puzzle.png" alt="" /></span>
+				<div class="input-container">
+					<input id='F' type="text" class="letter-input" maxlength="1" oninput="this.value = this.value.toUpperCase()">
+					<input id='R' type="text" class="letter-input" maxlength="1" oninput="this.value = this.value.toUpperCase()">
+					<input id='I' type="text" class="letter-input" maxlength="1" oninput="this.value = this.value.toUpperCase()">
+					<input id='D' type="text" class="letter-input" maxlength="1" oninput="this.value = this.value.toUpperCase()">
+					<input id='G' type="text" class="letter-input" maxlength="1" oninput="this.value = this.value.toUpperCase()">
+					<input id='E' type="text" class="letter-input" maxlength="1" oninput="this.value = this.value.toUpperCase()">
+				</div>
+				
+
+			<script>
+				let inputF = document.getElementById('F');
+				let inputR = document.getElementById('R');
+				let inputI = document.getElementById('I');
+				let inputD = document.getElementById('D');
+				let inputG = document.getElementById('G');
+				let inputE = document.getElementById('E');
+
+						inputF.addEventListener("input",() => {
+						checkInput(inputF, "F");
+						});
+						inputR.addEventListener("input",() => {
+						checkInput(inputR, "R");
+						});
+						inputI.addEventListener("input",() => {
+						checkInput(inputI, "I");
+						});
+						inputD.addEventListener("input",() => {
+						checkInput(inputD, "D");
+						});
+						inputG.addEventListener("input",() => {
+						checkInput(inputG, "G");
+						});
+						inputE2.addEventListener("input",() => {
+						checkInput(inputE2, "E");
+						});
+						// create an array of all input elements for hint function
+						let inputElements = getAllInputElements();
+				  
+				  
+
+			</script>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+						</ul>
+						<ul class="copyright">
+							<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+						</ul>
+					</footer>
+
+			</div>
+
+	</body>
+</html>
