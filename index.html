@@ -1,179 +1,198 @@
 <!DOCTYPE HTML>
-<!--
-	Spectral by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-	Maed changes
--->
 <html>
-	<head>
-		<title>Treasure Hunter by Q-Games</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-				
-				
-	</head>
-	<body class="landing is-preload">
 
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
+<head>
+	<title>Treasure Hunter by Q-Games</title>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="style.css">
+</head>
 
-				<!-- Header -->
-					<header id="header" class="alt">
-						<h1><a href="index.html">Treasure Hunter</a></h1>
-						<nav id="nav">
-							<ul>
-								<li class="special">
-									<a href="#menu" class="menuToggle"><span>Menu</span></a>
-									<div id="menu">
-										<ul>
-											<li><a href="puzzle-setup.html">Treasure Hunt Setup</a></li>
-											<li><a href="print-puzzle.html">Print Puzzle</a></li>
-											<li><a href="start-puzzle.html">Start Puzzle</a></li>
-											<li><a href="about.html">About Q-Games</a></li>
-											<li><a href="donate.html">Donate</a></li>
-											<li><a href="contact.html">Contact Us</a></li>
-											<!-- <li><a href="#">Sign Up</a></li>
-											<li><a href="#">Log In</a></li> -->
-										</ul>
-									</div>
-								</li>
-							</ul>
-						</nav>
-					</header>
-
-				<!-- Banner -->
-					<section id="banner">
-						<div class="inner">
-							<h2>Treasure Hunter</h2>
-							<p>Free customisable treasure hunt for all ages.<br />
-								Start your own treasure hunt now.</p>
-							<ul class="actions special">
-								<li><a href="puzzle-setup.html" class="button primary">Start Hunting</a></li>
-							</ul>
-						</div>
-						<a href="#one" class="more scrolly">Learn More</a>
-					</section>
-
-				<!-- One -->
-					<section id="one" class="wrapper style1 special">
-						<div class="inner">
-							<header class="major">
-								<h2>Setting up the Treasure Hunt</h2>
-								<p>It's easy, just follow these 3 steps.</p>
-							</header>
-							<ul class="icons major">
-								<div class="image-row">
-									<img src="images/Icon-closet.png" style: width="11%">
-									<img src="images/Icon-microwave.png" style: width="11%">
-									<img src="images/Icon-window.png" style: width="11%">
-								  </div>
-								<li><span class="label"><p><span class="underline">Step 1.</span> Choose the items where you want to hide your clues. 
-									The order in which you select your areas will determine the treasure hunt path. 
-									The last spot won't have a clue as you'll be putting the your treasure there!</p></span></li>
-									<div class="image-row">
-										<img src="images/Icon-pirate.png" style: width="12%">
-										<img src="images/Icon-magic.png" style: width="12%">
-										<img src="images/Icon-zombie.png" style: width="12%">
-									  </div>
-								<li><span class="label"><p><span class="underline">Step 2.</span> Select which theme you'd like. 
-									At the moment we only have pirates but look out in the future for more themes like medieval or fantasy.</span></p></li>
-									<div class="image-row">
-										<img src="images/Icon-Easy-w.png" style: width="11%">
-										<img src="images/Icon-Medium-w.png" style: width="11%">
-										<img src="images/Icon-Hard-w.png" style: width="11%">
-									  </div>
-								<li><span class="label"><p><span class="underline">Step 3.</span> Select the difficulty. Are your hunters as sharp as they seem?
-									Don't make it too difficult or they'll never get their treasure.
-								 </p></span></li>
-							</ul>
-							<a href="puzzle-setup.html" class="button primary">Go to Setup</a>
-						</div>
-					</section>
-
-				<!-- Two -->
-					<section id="two" class="wrapper alt style2">
-						<section class="spotlight">
-							<div class="image"><img src="images/Window-puzzle.png" alt="" /></div><div class="content">
-								<h2>Have you got what it takes to be a treasure hunter?</h2>
-								<p>Try solving this puzzle!</p>
-								<div class="input-container">
-									<input id='W' type="text" class="letter-input" maxlength="1" oninput="this.value = this.value.toUpperCase()">
-									<input id='I' type="text" class="letter-input" maxlength="1" oninput="this.value = this.value.toUpperCase()">
-									<input id='N' type="text" class="letter-input" maxlength="1" oninput="this.value = this.value.toUpperCase()">
-									<input id='D' type="text" class="letter-input" maxlength="1" oninput="this.value = this.value.toUpperCase()">
-									<input id='O' type="text" class="letter-input" maxlength="1" oninput="this.value = this.value.toUpperCase()">
-									<input id='W2' type="text" class="letter-input" maxlength="1" oninput="this.value = this.value.toUpperCase()">
-									<p id="successMsg"></p>
-								</div>
-								
-				
-							<script>
-								let inputW = document.getElementById('W');
-								let inputI = document.getElementById('I');
-								let inputN = document.getElementById('N');
-								let inputD = document.getElementById('D');
-								let inputO = document.getElementById('O');
-								let inputW2 = document.getElementById('W2');
-										inputW.addEventListener("input",() => {
-										checkInput(inputW, "W");
-										});
-										inputI.addEventListener("input",() => {
-										checkInput(inputI, "I");
-										});
-										inputN.addEventListener("input",() => {
-										checkInput(inputN, "N");
-										});
-										inputD.addEventListener("input",() => {
-										checkInput(inputD, "D");
-										});
-										inputO.addEventListener("input",() => {
-										checkInput(inputO, "O");
-										});
-										inputW2.addEventListener("input",() => {
-										checkInput(inputW2, "W");
-										});
-								//   var successMsg = document.getElementById('successMsg');
-								//   if(){
-								// 	console.log('test')
-								//  	successMsg.innerHTML = 'You got what it takes to be a hunter!'
-								//   }
-				
-							</script>
-							</div>
-					</section>
-					
-				
-
-				<!-- Footer -->
-					<footer id="footer">
-						<ul class="icons">
-							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon brands fa-dribbble"><span class="label">Tik Tok</span></a></li>
-							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+<body>
+	<div class="menu-popup">
+	</div>
+	<div class="mobile-menu-lists">
+		<div class="close-btn"><i class="fa fa-times" aria-hidden="true"></i></div>
+		<a href="index.html">Treasure Hunters</a>
+		<a href="about.html">About</a>
+		<a href="puzzle-setup.html">Setup</a>
+		<a href="start-puzzle.html">Puzzles</a>
+		<a href="contact.html">Contact </a>
+	</div>
+	<section id="header">
+		<div class="chevrons">
+			<div class="container">
+				<header>
+					<div class="logo">
+						<h2><a href="index.html">Q-Games</a></h2>
+					</div>
+					<div class="links">
+						<ul class="menu">
+							<!-- <li><a href="index.html">Q-Games</a></li> -->
+							<li><a href="about.html">About</a></li>
+							<li><a href="puzzle-setup.html">Setup</a></li>
+							<!-- <li><a href="print-puzzle.html">Print Puzzle</a></li> -->
+							<li><a href="start-puzzle.html">Puzzles</a></li>
+							<!-- <li><a href="donate.html">Donate</a></li> -->
+							<li><a href="contact.html">Contact </a></li>
 						</ul>
-						<ul class="copyright">
-							<li>&copy;2023 Q-Games. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-						</ul>
-					</footer>
-
+					</div>
+				</header>
+				<div class="mobile-menu">
+					<div class="logo-icon-area">
+						<div class="logo">
+							<h2>Q Games</h2>
+						</div>
+						<div class="icon"><i class="fa fa-bars"></i></div>
+					</div>
+				</div>
 			</div>
-<!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script>
-<script src="assets/js/jquery.scrollex.min.js"></script>
-<script src="assets/js/jquery.scrolly.min.js"></script>
-<script src="assets/js/browser.min.js"></script>
-<script src="assets/js/breakpoints.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js" integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
+		</div>
+	</section>
+	<section id="hero-section">
+		<div class="chevron">
+			<div class="container">
+				<div class="hero">
+					<div class="hero-image">
+						<img class="w-100 text-center" src="images/hero.png" alt="Hero Images">
+					</div>
+					<div class="hero-text text-center">
+						<h1>TREASURE HUNTER</h1>
+						<h2>Free customisable treasure hunt for all ages.<br />
+							Start your own treasure hunt now.</h2>
+							<br>
+							<div class="text-center">
+								<a class="button" href="puzzle-setup.html" class="button primary">Start Hunting!</a>
+							</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section id="settings">
+		<div class="chevron">
+			<div class="container">
+				<h2 class="text-center">Setting it up</h2>
+				<br>
+				
+				<div class="steps">
+					<div class="step">
+						<img src="images/treasure-map.png" alt="Amiba Icon">
+						<h2>Step 1</h2>
+						<h3>Choose the items where you want to hide your clues. 
+							The order in which you select your areas will determine the treasure hunt path. 
+							The last spot won't have a clue as you'll be putting the your treasure there!</h3>
+					</div>
+					<div class="step">
+						<img src="images/pirate-ship.png" alt="Amiba Icon">
+						<h2>Step 2</h2>
+						<h3>Select which theme you'd like. 
+							At the moment we only have pirates but look out in the future for more themes like medieval or fantasy.</h3>
+					</div>
+					<div class="step">
+						<img src="images/pirate-cannon-light-upscale2.png" alt="Amiba Icon">
+						<h2>Step 3</h2>
+						<h3>Select the difficulty. Are your hunters as sharp as they seem?
+							Don't make it too difficult or they'll never get their treasure.</h3>
+					</div>
+				</div>
+				<br><br>
+				<div class="text-center">
+					<a class="button" href="puzzle-setup.html" class="button primary">Go to setup</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="spotlight">
+		<div class="container">
+			<h2 class="text-center title">Have you got what it takes?</h2>
+			<div class="puzzle">
+				<div class="image"><img class="w-100" src="images/puzzle.jpg" alt="Puzzle" /></div>
+				<div class="content">
+					<div class="data">
+						<h2>Try solving this puzzle!</h2>
+						<div class="input-container">
+							<input id='W' type="text" class="letter-input" maxlength="1"
+								oninput="this.value = this.value.toUpperCase()">
+							<input id='I' type="text" class="letter-input" maxlength="1"
+								oninput="this.value = this.value.toUpperCase()">
+							<input id='N' type="text" class="letter-input" maxlength="1"
+								oninput="this.value = this.value.toUpperCase()">
+							<input id='D' type="text" class="letter-input" maxlength="1"
+								oninput="this.value = this.value.toUpperCase()">
+							<input id='O' type="text" class="letter-input" maxlength="1"
+								oninput="this.value = this.value.toUpperCase()">
+							<input id='W2' type="text" class="letter-input" maxlength="1"
+								oninput="this.value = this.value.toUpperCase()">
+							<p id="successMsg"></p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
 
-	</body>
+	<script>
+		let inputW = document.getElementById('W');
+		let inputI = document.getElementById('I');
+		let inputN = document.getElementById('N');
+		let inputD = document.getElementById('D');
+		let inputO = document.getElementById('O');
+		let inputW2 = document.getElementById('W2');
+		inputW.addEventListener("input", () => {
+			checkInput(inputW, "W");
+		});
+		inputI.addEventListener("input", () => {
+			checkInput(inputI, "I");
+		});
+		inputN.addEventListener("input", () => {
+			checkInput(inputN, "N");
+		});
+		inputD.addEventListener("input", () => {
+			checkInput(inputD, "D");
+		});
+		inputO.addEventListener("input", () => {
+			checkInput(inputO, "O");
+		});
+		inputW2.addEventListener("input", () => {
+			checkInput(inputW2, "W");
+		});
+		//   var successMsg = document.getElementById('successMsg');
+		//   if(){
+		// 	console.log('test')
+		//  	successMsg.innerHTML = 'You got what it takes to be a hunter!'
+		//   }
+	</script>
+
+
+	<!-- Footer -->
+	<footer id="footer-new">
+		
+		<div class="social-icons">
+			<a href="#"><i class="fa fa-facebook"></i></a>
+			<a href="#"><i class="fa fa-instagram"></i></a>
+			<a href="#"><i class="fa fa-twitter"></i></a>
+			<a href="#"><i class="fa fa-envelope"></i></a>
+		</div>
+	</footer>
+
+	</div>
+	<!-- Scripts -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+	<script src="assets/js/jquery.scrollex.min.js"></script>
+	<script src="assets/js/jquery.scrolly.min.js"></script>
+	<script src="assets/js/browser.min.js"></script>
+	<script src="assets/js/breakpoints.min.js"></script>
+	<script src="assets/js/util.js"></script>
+	<script src="js/main.js"></script>
+	<script src="js/custom.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+		integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.3.2/html2canvas.min.js"></script>
+</body>
+
 </html>

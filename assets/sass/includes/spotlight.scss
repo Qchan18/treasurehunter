@@ -1,0 +1,91 @@
+.spotlight {
+    background-color: #FDF0D5;
+    padding-top: 150px;
+    padding-bottom: 100px;
+
+    .title {
+        font-size: 80px;
+    }
+
+    .puzzle {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+        padding-top: 50px;
+
+        .image {
+            img {
+                max-width: 400px;
+                border: 1px solid #f3d496;
+                border-radius: 5px;
+                margin: auto;
+            }
+        }
+
+        .content {
+            position: relative;
+
+            .data {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                h2{
+                    font-size: 35px;
+                }
+                .input-container {
+                    display: flex;
+
+                    input {
+                        height: 65px;
+                        width: 65px;
+                        padding: 10px;
+                        margin: 10px;
+                        border: 2px solid #003049;
+                        border-radius: 10px;
+                        color: white;
+                        font-size: 25px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+}
+@media(max-width:768px){
+    .spotlight{
+        padding-top: 100px;
+        .title{
+            font-size: 35px;
+        }
+        .puzzle{
+            display: block;
+            text-align: center;
+            .image{
+                img{
+                    max-width: 250px;
+
+                }
+            }
+            .content{
+                .data{
+                    position: relative;
+                    top: 0;
+                    left: 0;
+                    transform: translate(0,0);
+                    margin-top: 25px;
+                    h2{
+                        font-size: 25px;
+                    }
+                    .input-container{
+                        display: block;
+                        input{
+                            height: 35px;
+                            width: 35px;
+                            font-size: 18px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

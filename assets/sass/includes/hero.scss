@@ -1,0 +1,44 @@
+#hero-section{
+    background-color: #FDF0D5;
+    position: relative;
+    .chevron::after {
+        content: '';
+        display: block;
+        height: 100px !important;
+        width: 100px !important;
+        background-color: #FDF0D5;
+        position: absolute;
+        bottom: -50px;
+        left: 50%;
+        margin-left: -50px;
+        transform: rotate(45deg);
+        z-index: 1 !important;
+    }
+    .hero {
+        padding: 50px 0 100px 0;
+    
+        .hero-image {
+            text-align: center;
+    
+            img {
+                max-width: 300px;
+                margin: auto;
+            }
+        }
+    }
+    
+    .hero-text {
+        h1 {
+            font-size: 50px;
+        }
+        h2{
+            color: rgb(34, 34, 34);
+        }
+        .button{
+            background-color: #669BBC;
+        }
+        .button:hover{
+            background-color: #38759b;
+        }
+    }
+}
