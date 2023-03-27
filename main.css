@@ -4166,9 +4166,4 @@ input, select, textarea {
 	  #footer-new .social-icons a i:before{
 		display: inline !important;
 	  }
-	  input[type="checkbox"]:checked + label:before, input[type="radio"]:checked + label:before {
-		background: #669BBC;
-		color: white !important;
-		content: '\f00d';
-		font-family: 'FontAwesome';
-	}	
+	 
