@@ -140,6 +140,7 @@ a:hover {
 }
 #hero-section .hero-text h1 {
   font-size: 50px;
+  color: black;
 }
 #hero-section .hero-text h2 {
   color: rgb(34, 34, 34);
