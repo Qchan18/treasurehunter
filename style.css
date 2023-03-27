@@ -204,12 +204,12 @@ a:hover {
   background-color: #4681a5;
 }
 #settings .button {
-  background-color: red;
+  background-color: #C1121F;
   color: white;
   transition: 0.3s ease;
 }
 #settings .button:hover {
-  background-color: rgb(247, 11, 11);
+  background-color: #C1121F
 }
 @media (max-width: 768px) {
   #settings .steps {
