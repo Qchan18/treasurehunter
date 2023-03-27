@@ -4003,12 +4003,12 @@ input, select, textarea {
 	}
 	
 	.select{
-		background: #2a2f3b;
+		background: #669BBC;
 		color: #fff;
 		display: flex;
 		justify-content: space-between;
 		align-items: center;
-		border: 2px #2a2f3b solid;
+		border: 2px #669BBC solid;
 		border-radius: 0.5em;
 		padding: 1em;
 		cursor: pointer;
@@ -4017,8 +4017,8 @@ input, select, textarea {
 
 	
 	.select-clicked {
-		border: 2px #26489a solid;
-		box-shadow: 0 0 0.8em #26489a;
+		border: 2px #669BBC solid;
+		box-shadow: 0 0 0.8em #669BBC;
 	}
 	
 	.select:hover{
@@ -4040,9 +4040,9 @@ input, select, textarea {
 	.theme{
 		list-style: none;
 		padding: 0.2em 0.5em;
-		background: #323741;
-		border: 1px #363a43 solid;
-		box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+		background: #669BBC;
+		border: 1px #669BBC solid;
+		box-shadow: 0 0.5em 1em #669BBC;
 		border-radius: 0.5em;
 		color: #9fa5b5;
 		position: absolute;
@@ -4064,11 +4064,11 @@ input, select, textarea {
 	}
 	
 	.theme li:hover{
-		background: #2a2d35;
+		background: #669BBC;
 	}
 	
 	.active{
-		background: #23242a;
+		background: #669BBC;
 	}
 	
 	.theme-open{
@@ -4078,14 +4078,14 @@ input, select, textarea {
 	.input-container {
 		display: flex;
 		justify-content: center;
-		border: 7px solid #2a2d35;
+		border: 7px solid #669BBC;
 	  }
 	  
 	  .letter-input {
 		font-size: smaller;
 		margin-right: 10px;
 		text-align: center;
-		border: 1px solid black;
+		border: 1px solid #669BBC;
 		box-sizing: border-box;
 	  }
 	.underline{
@@ -4094,8 +4094,8 @@ input, select, textarea {
 	}
 	
 	.print-values{
-		border: 1px solid #2a2f3b;
-		background: #2a2f3b;
+		border: 1px solid #669BBC;
+		background: #669BBC;
 		color: #fff;
 		border-radius: 0.5em;
 		padding: 1em;
@@ -4167,8 +4167,8 @@ input, select, textarea {
 		display: inline !important;
 	  }
 	  input[type="checkbox"]:checked + label:before, input[type="radio"]:checked + label:before {
-		background: #2e3842;
-		color: #ff0000 !important;
+		background: #669BBC;
+		color: white !important;
 		content: '\f00d';
 		font-family: 'FontAwesome';
-	}
+	}	

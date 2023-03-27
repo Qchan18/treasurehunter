@@ -18,6 +18,9 @@ body {
   margin: auto;
   z-index: 2;
 }
+.container h3{
+  color: white;
+}
 
 p {
   font-size: 18px;
@@ -404,6 +407,28 @@ a:hover {
     color: white;
     padding: 10px;
     font-size: 30px;
+  }
+  #desktopOnly{
+    display: none;
+  }
+  #message {
+    display: block;
+  }
+  
+}
+
+#mobileMessage{
+  display: none;
+}
+@media (max-width: 767px){
+ 
+  
+  #mobileMessage{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    display: contents;
+    font-size: 40px;
   }
 }
 
