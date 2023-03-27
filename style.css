@@ -14,9 +14,10 @@ body {
 }
 
 .container {
-  max-width: 1180px;
+  /* max-width: 1180px; */
   margin: auto;
   z-index: 2;
+  padding: 10px;
 }
 .container h3{
   color: white;
@@ -64,7 +65,7 @@ a:hover {
 #header {
   background-color: #FDF0D5;
   position: relative;
-  z-index: 10;
+  /* z-index: 10; */
 }
 #header .chevron::after {
   content: "";
@@ -352,10 +353,12 @@ a:hover {
   }
   #header .mobile-menu .logo-icon-area .logo h2 {
     font-size: 35px;
+    color: black;
   }
   #header .mobile-menu .logo-icon-area .icon i {
     font-size: 35px;
     padding: 20px;
+    color: black;
   }
   #header .mobile-menu .logo-icon-area .icon i i:hover {
     cursor: pointer;
