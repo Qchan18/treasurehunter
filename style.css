@@ -81,12 +81,12 @@ a:hover {
   z-index: 1 !important;
 }
 #header header {
-  display: grid;
-  grid-template-columns: 1fr 4fr;
+  display: flex;
+  justify-content: center;
+  font-weight: bold;
 }
 #header .logo {
-  height: 50px;
-  vertical-align: middle;
+
 }
 #header .logo h2 a {
   color: black;
@@ -235,7 +235,7 @@ a:hover {
   max-width: 400px;
   border: 1px solid #f3d496;
   border-radius: 5px;
-  margin: auto;
+  margin-left: 100px;
 }
 .spotlight .puzzle .content {
   position: relative;
