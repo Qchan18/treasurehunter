@@ -227,15 +227,13 @@ a:hover {
   font-size: 80px;
 }
 .spotlight .puzzle {
-  display: grid;
-  grid-template-columns: 2fr 3fr;
-  padding-top: 50px;
+  display: flex;
+  justify-content: space-evenly;
 }
 .spotlight .puzzle .image img {
   max-width: 400px;
   border: 1px solid #f3d496;
   border-radius: 5px;
-  margin-left: 100px;
 }
 .spotlight .puzzle .content {
   position: relative;
@@ -249,6 +247,17 @@ a:hover {
 .spotlight .puzzle .content .data h2 {
   font-size: 35px;
 }
+.spotlight .puzzle .content .data button {
+  background-color: #C1121F;
+  border: none;
+  text-align: middle;
+  padding: 10px;
+  position: absolute;
+  bottom: -70%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
 .spotlight .puzzle .content .data .input-container {
   display: flex;
 }
@@ -259,7 +268,7 @@ a:hover {
   margin: 10px;
   border: 2px solid #003049;
   border-radius: 10px;
-  color: white;
+  color: black;
   font-size: 25px;
   text-align: center;
 }

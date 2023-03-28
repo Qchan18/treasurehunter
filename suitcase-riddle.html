@@ -34,6 +34,7 @@
 				<nav id="nav">
 					<ul>
 						<li><button id="button" type="button" class="button primary" onclick="giveHint(inputElements)">Hint</button></li>
+						<li><button id="button" type="button" class="button primary" onclick="checkAnswer(inputElements, expected)">Submit Answer</button></li>
 					</ul>
 				</nav>
 			</header>
@@ -62,32 +63,32 @@
 				let inputS2 = document.getElementById('S2');
 				let inputE = document.getElementById('E');
 
-						inputS.addEventListener("input",() => {
-						checkInput(inputS, "S");
-						});
-						inputU.addEventListener("input",() => {
-						checkInput(inputU, "U");
-						});
-						inputI.addEventListener("input",() => {
-						checkInput(inputI, "I");
-						});
-						inputT.addEventListener("input",() => {
-						checkInput(inputT, "T");
-						});
-						inputC.addEventListener("input",() => {
-						checkInput(inputC, "C");
-						});
-						inputA.addEventListener("input",() => {
-						checkInput(inputA, "A");
-						});
-						inputS2.addEventListener("input",() => {
-						checkInput(inputS2, "S");
-						});
-						inputE.addEventListener("input",() => {
-						checkInput(inputE, "E");
-						});
-						// create an array of all input elements for hint function
-						let inputElements = getAllInputElements();				  
+				let inputElements = getAllInputElements();	
+				let expected = 'SUITCASE';					
+				function checkAnswer(input, expected){
+					let counter = 0;
+					for(let i = 0; i < expected.length;i++){
+						if(inputElements[i].value == expected[i]){
+							counter += 1;
+						}
+						if(counter == expected.length){
+							const inputElements = document.querySelectorAll('.input-container input');
+
+							for (let i = 0; i < inputElements.length; i++) {
+							inputElements[i].style.backgroundColor = 'green';
+							}
+
+						} else{
+							const inputElements = document.querySelectorAll('.input-container input');
+
+							for (let i = 0; i < inputElements.length; i++) {
+							inputElements[i].style.backgroundColor = 'red';
+							}
+						}
+						
+					}
+
+				}				  
 				  
 
 			</script>

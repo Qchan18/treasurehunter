@@ -34,6 +34,8 @@
 				<nav id="nav">
 					<ul>
 						<li><button id="button" type="button" class="button primary" onclick="giveHint(inputElements)">Hint</button></li>
+						<li><button id="button" type="button" class="button primary" onclick="checkAnswer(inputElements, expected)">Submit Answer</button></li>
+						
 					</ul>
 				</nav>
 			</header>
@@ -55,44 +57,39 @@
 				let inputC = document.getElementById('C');
 				let inputE2 = document.getElementById('E2');
 
+				let expected = 'FENCE';	
+				let inputElements = getAllInputElements();	
+				
+				function checkAnswer(input, expected){
+					let counter = 0;
+					for(let i = 0; i < expected.length;i++){
+						if(inputElements[i].value == expected[i]){
+							counter += 1;
+						}
+						if(counter == expected.length){
+							const inputElements = document.querySelectorAll('.input-container input');
 
-						inputF.addEventListener("input",() => {
-						checkInput(inputF, "F");
-						});
-						inputE.addEventListener("input",() => {
-						checkInput(inputE, "E");
-						});
-						inputN.addEventListener("input",() => {
-						checkInput(inputN, "N");
-						});
-						inputC.addEventListener("input",() => {
-						checkInput(inputC, "C");
-						});
-						inputE2.addEventListener("input",() => {
-						checkInput(inputE2, "E");
-						});
-						// create an array of all input elements for hint function
-						let inputElements = getAllInputElements();
+							for (let i = 0; i < inputElements.length; i++) {
+							inputElements[i].style.backgroundColor = 'green';
+							}
+
+						} else{
+							const inputElements = document.querySelectorAll('.input-container input');
+
+							for (let i = 0; i < inputElements.length; i++) {
+							inputElements[i].style.backgroundColor = 'red';
+							}
+						}
+						
+					}
+
+				}
 				  
 				  
 
 			</script>
 
-				<!-- Footer -->
-					<footer id="footer">
-						<ul class="icons">
-							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-							<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
-							<li><a href="#" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
-						</ul>
-						<ul class="copyright">
-							<li>&copy; Untitled</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-						</ul>
-					</footer>
-
-			</div>
+				
 			<br>
 	</body>
 </html>

@@ -34,6 +34,7 @@
 				<nav id="nav">
 					<ul>
 						<li><button id="button" type="button" class="button primary" onclick="giveHint(inputElements)">Hint</button></li>
+						<li><button id="button" type="button" class="button primary" onclick="checkAnswer(inputElements, expected)">Submit Answer</button></li>
 					</ul>
 				</nav>
 			</header>
@@ -62,33 +63,33 @@
 				let inputL = document.getElementById('L');
 				let inputL2 = document.getElementById('L2');
 				let inputA = document.getElementById('A');
+				let expected = 'UMBRELLA';
+				let inputElements = getAllInputElements();	
+				
+				function checkAnswer(input, expected){
+					let counter = 0;
+					for(let i = 0; i < expected.length;i++){
+						if(inputElements[i].value == expected[i]){
+							counter += 1;
+						}
+						if(counter == expected.length){
+							const inputElements = document.querySelectorAll('.input-container input');
 
-						inputU.addEventListener("input",() => {
-						checkInput(inputU, "U");
-						});
-						inputM.addEventListener("input",() => {
-						checkInput(inputM, "M");
-						});
-						inputB.addEventListener("input",() => {
-						checkInput(inputB, "B");
-						});
-						inputR.addEventListener("input",() => {
-						checkInput(inputR, "R");
-						});
-						inputE.addEventListener("input",() => {
-						checkInput(inputE, "E");
-						});
-						inputL.addEventListener("input",() => {
-						checkInput(inputL, "L");
-						});
-						inputL2.addEventListener("input",() => {
-						checkInput(inputL2, "L");
-						});
-						inputA.addEventListener("input",() => {
-						checkInput(inputA, "A");
-						});
-						// create an array of all input elements for hint function
-						let inputElements = getAllInputElements();				  
+							for (let i = 0; i < inputElements.length; i++) {
+							inputElements[i].style.backgroundColor = 'green';
+							}
+
+						} else{
+							const inputElements = document.querySelectorAll('.input-container input');
+
+							for (let i = 0; i < inputElements.length; i++) {
+							inputElements[i].style.backgroundColor = 'red';
+							}
+						}
+						
+					}
+
+				}			  
 				  
 
 			</script>

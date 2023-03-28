@@ -81,43 +81,33 @@
 			let inputU = document.getElementById('U');
 			let inputM2 = document.getElementById('M2');
 
+			let expected = 'FAMILYALBUM';					
+			let inputElements = getAllInputElements();	
 				
-					inputF.addEventListener("input",() => {
-					checkInput(inputF, "F");
-					});
-					inputA.addEventListener("input",() => {
-					checkInput(inputA, "A");
-					});
-					inputM.addEventListener("input",() => {
-					checkInput(inputM, "M");
-					});
-					inputI.addEventListener("input",() => {
-					checkInput(inputI, "I");
-					});
-					inputL.addEventListener("input",() => {
-					checkInput(inputL, "L");
-					});
-					inputY.addEventListener("input",() => {
-					checkInput(inputY, "Y");
-					});
-					inputA2.addEventListener("input",() => {
-					checkInput(inputA2, "A");
-					});
-					inputL2.addEventListener("input",() => {
-					checkInput(inputL2, "L");
-					});
-					inputB.addEventListener("input",() => {
-					checkInput(inputB, "B");
-					});
-					inputU.addEventListener("input",() => {
-					checkInput(inputU, "U");
-					});
-					inputM2.addEventListener("input",() => {
-					checkInput(inputM2, "M");
-					});
-				
-						// create an array of all input elements for hint function
-						let inputElements = getAllInputElements();
+				function checkAnswer(input, expected){
+					let counter = 0;
+					for(let i = 0; i < expected.length;i++){
+						if(inputElements[i].value == expected[i]){
+							counter += 1;
+						}
+						if(counter == expected.length){
+							const inputElements = document.querySelectorAll('.input-container input');
+
+							for (let i = 0; i < inputElements.length; i++) {
+							inputElements[i].style.backgroundColor = 'green';
+							}
+
+						} else{
+							const inputElements = document.querySelectorAll('.input-container input');
+
+							for (let i = 0; i < inputElements.length; i++) {
+							inputElements[i].style.backgroundColor = 'red';
+							}
+						}
+						
+					}
+
+				}
 
 		</script>
 		<br>

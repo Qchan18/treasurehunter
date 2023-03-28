@@ -32,6 +32,7 @@
 					<nav id="nav">
 						<ul>
 							<li><button id="button" type="button" class="button primary small" onclick="giveHint(inputElements)">Hint</button></li>
+							<li><button id="button" type="button" class="button primary" onclick="checkAnswer(inputElements, expected)">Submit Answer</button></li>
 						</ul>
 					</nav>
 				</header>
@@ -70,53 +71,36 @@
 				// let inputN2 = document.getElementById('N2');
 				// let inputE = document.getElementById('E');
 				// let inputR2 = document.getElementById('R2');
-				let inputElements = getAllInputElements();	
+					
 
-						inputA.addEventListener("input",() => {
-						checkInput(inputA, "A");
-						});
-						inputI.addEventListener("input",() => {
-						checkInput(inputI, "I");
-						});
-						inputR.addEventListener("input",() => {
-						checkInput(inputR, "R");
-						});
-						inputC.addEventListener("input",() => {
-						checkInput(inputC, "C");
-						});
-						inputO.addEventListener("input",() => {
-						checkInput(inputO, "O");
-						});
-						inputN.addEventListener("input",() => {
-						checkInput(inputN, "N");
-						});
-						// inputD.addEventListener("input",() => {
-						// checkInput(inputD, "D");
-						// });
-						// inputI2.addEventListener("input",() => {
-						// checkInput(inputI2, "I");
-						// });
-						// inputT.addEventListener("input",() => {
-						// checkInput(inputT, "T");
-						// });
-						// inputI3.addEventListener("input",() => {
-						// checkInput(inputI3, "I");
-						// });
-						// inputO2.addEventListener("input",() => {
-						// checkInput(inputO2, "O");
-						// });
-						// inputN2.addEventListener("input",() => {
-						// checkInput(inputN2, "N");
-						// });
-						// inputE.addEventListener("input",() => {
-						// checkInput(inputE, "E");
-						// });
-						// inputR2.addEventListener("input",() => {
-						// checkInput(inputR2, "R");
-						// });
-						// create an array of all input elements for hint function
-									  
-				  
+				let expected = ['A','I','R','C','O','N'];
+				let inputElements = getAllInputElements();	
+				
+				function checkAnswer(input, expected){
+					let counter = 0;
+					for(let i = 0; i < expected.length;i++){
+						if(inputElements[i].value == expected[i]){
+							counter += 1;
+						}
+						if(counter == expected.length){
+							inputA.style.backgroundColor = "green";
+							inputI.style.backgroundColor = "green";
+							inputR.style.backgroundColor = "green";
+							inputC.style.backgroundColor = "green";
+							inputO.style.backgroundColor = "green";
+							inputN.style.backgroundColor = "green";
+						} else{
+							inputA.style.backgroundColor = "red";
+							inputI.style.backgroundColor = "red";
+							inputR.style.backgroundColor = "red";
+							inputC.style.backgroundColor = "red";
+							inputO.style.backgroundColor = "red";
+							inputN.style.backgroundColor = "red";
+						}
+						
+					}
+
+				}
 
 			</script>
 

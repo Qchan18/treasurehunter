@@ -34,21 +34,12 @@
 				<nav id="nav">
 					<ul>
 						<li><button id="button" type="button" class="button primary" onclick="giveHint(inputElements)">Hint</button></li>
+						<li><button id="button" type="button" class="button primary" onclick="checkAnswer(inputElements, expected)">Submit Answer</button></li>
 					</ul>
 				</nav>
 			</header>
-				<span class="image fit main"><img src="images/Bathtub-puzzle.png" alt="" /></span>
-			<!-- Banner -->
-			<!-- <div id="puzzleword">
-				<h2>Hmm... another clue it seems...</h2>
-
-			</div> -->
-			
-				
-
-		</div>
-
-			<!--Answer-->
+			<!-- Main -->
+			<span class="image fit main"><img src="images/Bathtub-puzzle.png" alt="" /></span>
 			<div class="input-container">
 				<input id='B' type="text" class="letter-input" maxlength="1" oninput="this.value = this.value.toUpperCase()">
 				<input id='A' type="text" class="letter-input" maxlength="1" oninput="this.value = this.value.toUpperCase()">
@@ -57,8 +48,6 @@
 				<input id='T2' type="text" class="letter-input" maxlength="1" oninput="this.value = this.value.toUpperCase()">
 				<input id='U' type="text" class="letter-input" maxlength="1" oninput="this.value = this.value.toUpperCase()">
 				<input id='B2' type="text" class="letter-input" maxlength="1" oninput="this.value = this.value.toUpperCase()">
-				
-			
 			</div>
 			
 
@@ -69,33 +58,38 @@
 			let inputH = document.getElementById('H');
 			let inputT2 = document.getElementById('T2');
 			let inputU = document.getElementById('U');
-			let inputB2 = document.getElementById('B2');
+			let inputB2 = document.getElementById('B2');	
 
+			let expected = ['B','A','T','H','T','U','B'];
+			let inputElements = getAllInputElements();	
 			
-					inputB.addEventListener("input",() => {
-					checkInput(inputB, "B");
-					});
-					inputA.addEventListener("input",() => {
-					checkInput(inputA, "A");
-					});
-					inputT.addEventListener("input",() => {
-					checkInput(inputT, "T");
-					});
-					inputH.addEventListener("input",() => {
-					checkInput(inputH, "H");
-					});
-					inputT2.addEventListener("input",() => {
-					checkInput(inputT2, "T");
-					});
-					inputU.addEventListener("input",() => {
-						checkInput(inputU, "U");
-						});
-						inputB2.addEventListener("input",() => {
-						checkInput(inputB2, "B");
-						});
-						// create an array of all input elements for hint function
-						let inputElements = getAllInputElements();
-				
+			function checkAnswer(input, expected){
+				let counter = 0;
+				for(let i = 0; i < expected.length;i++){
+					if(inputElements[i].value == expected[i]){
+						counter += 1;
+					}
+					if(counter == expected.length){
+						inputB.style.backgroundColor = "green";
+						inputA.style.backgroundColor = "green";
+						inputT.style.backgroundColor = "green";
+						inputH.style.backgroundColor = "green";
+						inputT2.style.backgroundColor = "green";
+						inputU.style.backgroundColor = "green";
+						inputB2.style.backgroundColor = "green";
+					} else{
+						inputB.style.backgroundColor = "red";
+						inputA.style.backgroundColor = "red";
+						inputT.style.backgroundColor = "red";
+						inputH.style.backgroundColor = "red";
+						inputT2.style.backgroundColor = "red";
+						inputU.style.backgroundColor = "red";
+						inputB.style.backgroundColor = "red";
+					}
+					
+				}
+
+			}
 
 			  
 

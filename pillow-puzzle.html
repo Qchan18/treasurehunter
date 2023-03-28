@@ -24,6 +24,8 @@
 					<nav id="nav">
 						<ul>
 							<li><button id="button" type="button" class="button primary" onclick="giveHint(inputElements)">Hint</button></li>
+							<li><button id="button" type="button" class="button primary" onclick="checkAnswer(inputElements, expected)">Submit Answer</button></li>
+							
 						</ul>
 					</nav>
 				</header>
@@ -64,27 +66,33 @@
 				let inputL2 = document.getElementById('L2');
 				let inputO = document.getElementById('O');
 				let inputW = document.getElementById('W');
+				let expected = 'PILLOW';					
+				let inputElements = getAllInputElements();	
 				
-						inputP.addEventListener("input",() => {
-						checkInput(inputP, "P");
-						});
-						inputI.addEventListener("input",() => {
-						checkInput(inputI, "I");
-						});
-						inputL.addEventListener("input",() => {
-						checkInput(inputL, "L");
-						});
-						inputL2.addEventListener("input",() => {
-						checkInput(inputL2, "L");
-						});
-						inputO.addEventListener("input",() => {
-						checkInput(inputO, "O");
-						});
-						inputW.addEventListener("input",() => {
-						checkInput(inputW, "W");
-						});
-						// create an array of all input elements for hint function
-						let inputElements = getAllInputElements();
+				function checkAnswer(input, expected){
+					let counter = 0;
+					for(let i = 0; i < expected.length;i++){
+						if(inputElements[i].value == expected[i]){
+							counter += 1;
+						}
+						if(counter == expected.length){
+							const inputElements = document.querySelectorAll('.input-container input');
+
+							for (let i = 0; i < inputElements.length; i++) {
+							inputElements[i].style.backgroundColor = 'green';
+							}
+
+						} else{
+							const inputElements = document.querySelectorAll('.input-container input');
+
+							for (let i = 0; i < inputElements.length; i++) {
+							inputElements[i].style.backgroundColor = 'red';
+							}
+						}
+						
+					}
+
+				}
 
 						
 

@@ -106,6 +106,8 @@
 	<section class="spotlight">
 		<div class="container">
 			<h2 class="text-center title" style="font-size: 40px">Have you got what it takes?</h2>
+			<br>
+			<br>
 			<div class="puzzle">
 				<div class="image"><img class="w-100" src="images/puzzle.jpg" alt="Puzzle" /></div>
 				<div class="content">
@@ -124,9 +126,11 @@
 								oninput="this.value = this.value.toUpperCase()">
 							<input id='W2' type="text" class="letter-input" maxlength="1"
 								oninput="this.value = this.value.toUpperCase()">
-							<p id="successMsg"></p>
+							<br>
 						</div>
+						<button id="button" type="button" class="button primary" onclick="checkAnswer(inputElements, expected)">Submit Answer</button>
 					</div>
+					
 				</div>
 			</div>
 		</div>
@@ -139,29 +143,38 @@
 		let inputD = document.getElementById('D');
 		let inputO = document.getElementById('O');
 		let inputW2 = document.getElementById('W2');
-		inputW.addEventListener("input", () => {
-			checkInput(inputW, "W");
-		});
-		inputI.addEventListener("input", () => {
-			checkInput(inputI, "I");
-		});
-		inputN.addEventListener("input", () => {
-			checkInput(inputN, "N");
-		});
-		inputD.addEventListener("input", () => {
-			checkInput(inputD, "D");
-		});
-		inputO.addEventListener("input", () => {
-			checkInput(inputO, "O");
-		});
-		inputW2.addEventListener("input", () => {
-			checkInput(inputW2, "W");
-		});
-		//   var successMsg = document.getElementById('successMsg');
-		//   if(){
-		// 	console.log('test')
-		//  	successMsg.innerHTML = 'You got what it takes to be a hunter!'
-		//   }
+		let expected = ['W','I','N','D','O','W'];
+		let inputElements = getAllInputElements();	
+				
+		function getAllInputElements() {
+			let inputElements = Array.from(document.getElementsByTagName('input'));
+			return inputElements;
+		}
+				function checkAnswer(input, expected){
+					let counter = 0;
+					for(let i = 0; i < expected.length;i++){
+						if(inputElements[i].value == expected[i]){
+							counter += 1;
+						}
+						if(counter == expected.length){
+							inputW.style.backgroundColor = "green";
+							inputI.style.backgroundColor = "green";
+							inputN.style.backgroundColor = "green";
+							inputD.style.backgroundColor = "green";
+							inputO.style.backgroundColor = "green";
+							inputW2.style.backgroundColor = "green";
+						} else{
+							inputW.style.backgroundColor = "red";
+							inputI.style.backgroundColor = "red";
+							inputN.style.backgroundColor = "red";
+							inputD.style.backgroundColor = "red";
+							inputO.style.backgroundColor = "red";
+							inputW2.style.backgroundColor = "red";
+						}
+						
+					}
+
+				}
 	</script>
 
 

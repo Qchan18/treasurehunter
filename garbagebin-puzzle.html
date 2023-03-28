@@ -34,6 +34,7 @@
 				<nav id="nav">
 					<ul>
 						<li><button id="button" type="button" class="button primary" onclick="giveHint(inputElements)">Hint</button></li>
+						<li><button id="button" type="button" class="button primary" onclick="checkAnswer(inputElements, expected)">Submit Answer</button></li>
 					</ul>
 				</nav>
 			</header>
@@ -63,40 +64,33 @@
 				let inputI = document.getElementById('I');
 				let inputN = document.getElementById('N');
 
+				let expected = 'GARBAGEBIN';					
+				let inputElements = getAllInputElements();	
 				
-						inputG.addEventListener("input",() => {
-						checkInput(inputG, "G");
-						});
-						inputA.addEventListener("input",() => {
-						checkInput(inputA, "A");
-						});
-						inputR.addEventListener("input",() => {
-						checkInput(inputR, "R");
-						});
-						inputB.addEventListener("input",() => {
-						checkInput(inputB, "B");
-						});
-						inputA2.addEventListener("input",() => {
-						checkInput(inputA2, "A");
-						});
-						inputG2.addEventListener("input",() => {
-						checkInput(inputG2, "G");
-						});
-						inputE.addEventListener("input",() => {
-						checkInput(inputE, "E");
-						});
-						inputB2.addEventListener("input",() => {
-						checkInput(inputB2, "B");
-						});
-						inputI.addEventListener("input",() => {
-						checkInput(inputI, "I");
-						});
-						inputN.addEventListener("input",() => {
-						checkInput(inputN, "N");
-						});
-						// create an array of all input elements for hint function
-						let inputElements = getAllInputElements();
+				function checkAnswer(input, expected){
+					let counter = 0;
+					for(let i = 0; i < expected.length;i++){
+						if(inputElements[i].value == expected[i]){
+							counter += 1;
+						}
+						if(counter == expected.length){
+							const inputElements = document.querySelectorAll('.input-container input');
 
+							for (let i = 0; i < inputElements.length; i++) {
+							inputElements[i].style.backgroundColor = 'green';
+							}
+
+						} else{
+							const inputElements = document.querySelectorAll('.input-container input');
+
+							for (let i = 0; i < inputElements.length; i++) {
+							inputElements[i].style.backgroundColor = 'red';
+							}
+						}
+						
+					}
+
+				}
 					
 			</script>
 			<br>

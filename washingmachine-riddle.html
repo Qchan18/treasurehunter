@@ -34,6 +34,7 @@
 				<nav id="nav">
 					<ul>
 						<li><button id="button" type="button" class="button primary" onclick="giveHint(inputElements)">Hint</button></li>
+						<li><button id="button" type="button" class="button primary" onclick="checkAnswer(inputElements, expected)">Submit Answer</button></li>
 					</ul>
 				</nav>
 			</header>
@@ -75,51 +76,33 @@
 				let inputI2 = document.getElementById('I2');
 				let inputN2 = document.getElementById('N2');
 				let inputE = document.getElementById('E');
+				let expected = 'WASHINGMACHINE';
+				let inputElements = getAllInputElements();	
+				
+				function checkAnswer(input, expected){
+					let counter = 0;
+					for(let i = 0; i < expected.length;i++){
+						if(inputElements[i].value == expected[i]){
+							counter += 1;
+						}
+						if(counter == expected.length){
+							const inputElements = document.querySelectorAll('.input-container input');
 
-						inputW.addEventListener("input",() => {
-						checkInput(inputW, "W");
-						});
-						inputA.addEventListener("input",() => {
-						checkInput(inputA, "A");
-						});
-						inputS.addEventListener("input",() => {
-						checkInput(inputS, "S");
-						});
-						inputH.addEventListener("input",() => {
-						checkInput(inputH, "H");
-						});
-						inputI.addEventListener("input",() => {
-						checkInput(inputI, "I");
-						});
-						inputN.addEventListener("input",() => {
-						checkInput(inputN, "N");
-						});
-						inputG.addEventListener("input",() => {
-						checkInput(inputG, "G");
-						});
-						inputM.addEventListener("input",() => {
-						checkInput(inputM, "M");
-						});
-						inputA2.addEventListener("input",() => {
-						checkInput(inputA2, "A");
-						});
-						inputC.addEventListener("input",() => {
-						checkInput(inputC, "C");
-						});
-						inputH2.addEventListener("input",() => {
-						checkInput(inputH2, "H");
-						});
-						inputI2.addEventListener("input",() => {
-						checkInput(inputI2, "I");
-						});
-						inputN2.addEventListener("input",() => {
-						checkInput(inputN2, "N");
-						});
-						inputE.addEventListener("input",() => {
-						checkInput(inputE, "E");
-						});
-						// create an array of all input elements for hint function
-						let inputElements = getAllInputElements();				  
+							for (let i = 0; i < inputElements.length; i++) {
+							inputElements[i].style.backgroundColor = 'green';
+							}
+
+						} else{
+							const inputElements = document.querySelectorAll('.input-container input');
+
+							for (let i = 0; i < inputElements.length; i++) {
+							inputElements[i].style.backgroundColor = 'red';
+							}
+						}
+						
+					}
+
+				}			  
 				  
 
 			</script>
