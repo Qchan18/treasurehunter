@@ -34,6 +34,7 @@
 				<nav id="nav">
 					<ul>
 						<li><button id="button" type="button" class="button primary" onclick="giveHint(inputElements)">Hint</button></li>
+						<li><button id="button" type="button" class="button primary" onclick="checkAnswer(inputElements, expected)">Submit Answer</button></li>
 					</ul>
 				</nav>
 			</header>
@@ -50,18 +51,39 @@
 				let inputB = document.getElementById('B');
 				let inputE = document.getElementById('E');
 				let inputD = document.getElementById('D');
+				let expected = ['B','E','D'];
+				let inputElements = getAllInputElements();	
+				
+				function checkAnswer(input, expected){
+					let counter = 0;
+					for(let i = 0; i < expected.length;i++){
+						if(inputElements[i].value == expected[i]){
+							counter += 1;
+						}
+						if(counter == expected.length){
+							inputB.style.backgroundColor = "green";
+							inputE.style.backgroundColor = "green";
+							inputD.style.backgroundColor = "green";
+						} else{
+							inputB.style.backgroundColor = "red";
+							inputE.style.backgroundColor = "red";
+							inputD.style.backgroundColor = "red";
+						}
+						
+					}
 
-						inputB.addEventListener("input",() => {
-						checkInput(inputB, "B");
-						});
-						inputE.addEventListener("input",() => {
-						checkInput(inputE, "E");
-						});
-						inputD.addEventListener("input",() => {
-						checkInput(inputD, "D");
-						});
-						// create an array of all input elements for hint function
-						let inputElements = getAllInputElements();				  
+				}
+						// inputB.addEventListener("input",() => {
+						// checkInput(inputB, "B");
+						// });
+						// inputE.addEventListener("input",() => {
+						// checkInput(inputE, "E");
+						// });
+						// inputD.addEventListener("input",() => {
+						// checkInput(inputD, "D");
+						// });
+						// // create an array of all input elements for hint function
+									  
 				  
 
 			</script>
